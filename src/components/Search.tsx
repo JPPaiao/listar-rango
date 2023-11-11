@@ -6,7 +6,7 @@ interface Props {
 
 const Search: React.FC<Props> = ({ placeholder }) => {
   return (
-    <form action="#" className="flex w-full">
+    <form action="#" className="flex w-full font-mont">
       <input type="text" placeholder={placeholder}
         className="outline-none px-7 py-2 bg-[#fffefe] rounded-full shadow-box w-full"
       />
