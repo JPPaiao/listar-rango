@@ -10,14 +10,16 @@ const ListRestaurants: React.FC = () => {
         <h1 className="text-2xl text-zinc-600">
           Bem-vindo ao Lista Rango
         </h1>
-        <div className="w-[840px]">
+      </header>
+      <main className="px-2">
+        <div className="w-[840px] py-6 m-auto">
           <Search placeholder={"Buscar estabelecimento"} />
         </div>
-      </header>
-      <main className="px-2 py-12 flex justify-evenly items-center flex-wrap gap-2">
-        <CardListRestaurant />
-        <CardListRestaurant />
-        <CardListRestaurant />
+        <div className="flex justify-evenly items-center flex-wrap gap-2 py-3">
+          <CardListRestaurant />
+          <CardListRestaurant />
+          <CardListRestaurant />
+        </div>
       </main>
     </div>
   )
