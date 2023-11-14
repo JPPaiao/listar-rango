@@ -1,0 +1,95 @@
+{
+  "restaurants": [
+    {
+      "id": 0,
+      "name": "Mc Donalds",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "20:00",
+          "to": "00:00",
+          "days": [1, 4, 5, 6, 7]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Seu Coxinha",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "11:30",
+          "to": "20:00",
+          "days": [2, 3, 4, 5, 6]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Gerson Pizzas",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "18:00",
+          "to": "23:00",
+          "days": [1, 4, 5, 6, 7]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Rubens Japa",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "18:00",
+          "to": "00:00",
+          "days": [1, 6, 7]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Poul Restaurante",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "11:00",
+          "to": "20:00",
+          "days": [2, 3, 4, 5, 6]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Luna Doces",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "13:00",
+          "to": "19:00",
+          "days": [2, 3, 4, 5, 6, 7]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Coffes Gourmet",
+      "address": "R. São João, 82 - Vila Nova, Cubatão - SP",
+      "image": "https://public-v2links.adobecc.com/f6e71782-ebba-4573-6f7a-005a1a6d391f/component?params=component_id%3Aabe81f56-8318-42ae-92a0-f3daac1d5432&params=version%3A0&token=1699988012_da39a3ee_dd55a261323839727fa0f3ac6517ddd188e435fe&api_key=CometServer1",
+      "hours": [
+        {
+          "from": "08:00",
+          "to": "18:30",
+          "days": [2, 3, 4, 5, 6, 7]
+        }
+      ]
+    }
+  ]
+}
