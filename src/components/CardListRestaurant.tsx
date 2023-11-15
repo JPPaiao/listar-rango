@@ -1,5 +1,5 @@
-import { useState } from "react"
 import restaurantLogo from "../assets/vegan-restaurant-logo-design_1438-10.png"
+import { Link } from "react-router-dom"
 
 interface Restaurant {
   id: number,
@@ -25,16 +25,16 @@ const CardListRestaurant: React.FC<Props> = ({ restaurant }) => {
 
   return (
     <div>
-      <div className="font-sans flex gap-6 justify-between items-center shadow-box rounded px-3  w-full">
+      <Link to={`/restaurant/${restaurant.id}`} className="font-sans flex gap-6 justify-between items-center shadow-box rounded px-3  w-full cursor-pointer">
         <div className="max-w-[106px]">
-          <img src={restaurant.image} alt="Restaurant logo" />
+          <img src={restaurantLogo} alt="Restaurant logo" />
         </div>
         <div className="text-zinc-600 font-mont">
           <h2 className="font-semibold text-base">{restaurant.name}</h2>
           <h3 className="text-xs max-w-[200px]">{restaurant.address}</h3>
         </div>
-      </div>
-      <div className="relative w-10 bg-indigo-900 bottom-28 left-80 p-2 text-[.50rem] text-center flex justify-center items-center rounded-full text-white font-mont">
+      </Link>
+      <div className="relative w-14 bg-indigo-900 bottom-28 left-80 py-2 px-1 text-xs text-center flex justify-center items-center rounded-full text-white font-mont">
         {
           (open) ? (
             <>
