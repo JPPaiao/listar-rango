@@ -1,6 +1,6 @@
 import { Search } from "../components/Search"
 import { CardListRestaurant } from "../components/CardListRestaurant"
-import { useEffect, useState } from "react"
+import { useLoaderData } from "react-router-dom"
 
 interface Restaurants {
   id: number,
@@ -16,16 +16,16 @@ interface Restaurants {
   ]
 }
 
-const ListRestaurants: React.FC = () => {
-  const [restaurants, setRestaurants] = useState<Restaurants[]>([])
+const LoaderList = async () => {
+  const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
+  const dataLoader = data
 
-  useEffect(() => {
-    const list = async () => {
-      const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
-      setRestaurants(data)
-    }
-    list()
-  }, [])
+  return dataLoader
+}
+
+const ListRestaurants: React.FC = () => {
+  const dataLoader = useLoaderData() as Restaurants[]
+  const restaurants: Restaurants[] = dataLoader
 
   return (
     <div className="h-screen font-mont">
@@ -42,12 +42,8 @@ const ListRestaurants: React.FC = () => {
         </div>
         <div className="flex justify-evenly items-center flex-wrap gap-2 py-3 px-4">
           {
-            restaurants.map((value: Restaurants) => {
-
-              return (
-                <CardListRestaurant restaurant={value}/>
-              )
-            })
+            restaurants.map((value: Restaurants) => <CardListRestaurant restaurant={value} key={value.id} />
+            )
           }
         </div>
       </main>
@@ -55,4 +51,4 @@ const ListRestaurants: React.FC = () => {
   )
 }
 
-export { ListRestaurants }
+export { ListRestaurants, LoaderList }

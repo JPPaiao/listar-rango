@@ -4,17 +4,19 @@ import {
     RouterProvider,
 } from 'react-router-dom'
 import './index.css'
-import { ListRestaurants } from './routers/ListRestaurants.tsx'
-import { Restaurant } from './routers/Restaurant.tsx'
+import { ListRestaurants, LoaderList } from './routers/ListRestaurants.tsx'
+import { Restaurant, RestaurantLoader } from './routers/Restaurant.tsx'
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <ListRestaurants />
+        element: <ListRestaurants />,
+        loader: LoaderList
     },
     {
-        path: '/restaurant',
-        element: <Restaurant />
+        path: '/restaurant/:id',
+        element: <Restaurant />,
+        loader: RestaurantLoader
     }
 ])
 
