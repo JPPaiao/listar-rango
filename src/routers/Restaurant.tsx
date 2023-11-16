@@ -4,18 +4,24 @@ import { CardCardapio } from "../components/CardCardapio"
 import { Search } from "../components/Search"
 import { useLoaderData } from "react-router-dom"
 
+interface TextHours {
+  weeks: string,
+  saturday: string,
+  sunday: string
+}
+
+interface Hours {
+  from: string,
+  to: string,
+  days: number[]
+}
+
 interface Restaurants {
   id: number,
   name: string,
   address: string,
   image: string,
-  hours: [
-    {
-      from: string,
-      to: string,
-      days: number[]
-    }
-  ]
+  hours: Hours[]
 }
 
 const RestaurantLoader = async ({ params }) => {
@@ -25,8 +31,35 @@ const RestaurantLoader = async ({ params }) => {
 
   return restaurant
 }
+
 const Restaurant: React.FC = () => {
   const restaurant: Restaurants = useLoaderData() as Restaurants
+
+  const daysWeekOpen = (hours: Hours) => {
+    const days: string[] = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+    const daysWeek: string[] = []
+    const endWeek: string[] = []
+
+    hours.days.forEach((d: number) => {
+      if (days[d-1] == days[0] || days[d-1] == days[days.length-1]) {
+        endWeek.push(days[d-1])
+      } else {
+        daysWeek.push(days[d-1])
+      }
+    })
+    
+    const sunday: string = endWeek.includes('Domingo') ? `Domingo:  ${hours.from} às ${hours.to}` : ''
+    const saturday: string = endWeek.includes('Sábado') ? `Sábado:  ${hours.from} às ${hours.to}` : ''
+    const text: TextHours = {
+      weeks: `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`,
+      saturday: saturday,
+      sunday: sunday
+    }
+
+    return text
+  }
+
+  const daysOpen: TextHours = daysWeekOpen(restaurant.hours[0])
 
   return (
     <div>
@@ -44,9 +77,9 @@ const Restaurant: React.FC = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dignissimos excepturi aperiam laudantium, voluptates tempora sunt nam omnis delectus deleniti
               </p>
               <div className="text-xs flex flex-col">
-                <span>Segunda à Sexta: {restaurant.hours[0].from} às {restaurant.hours[0].to}</span>
-                <span>Sabados: 11:30 às 22:00</span>
-                <span>Domingos e feriados: 11:30 às 15:00</span>
+                <span>{daysOpen.weeks}</span>
+                <span>{daysOpen.saturday}</span>
+                <span>{daysOpen.sunday}</span>
               </div>
             </div>
           </div>
