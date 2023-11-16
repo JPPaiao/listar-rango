@@ -1,20 +1,7 @@
 import { Search } from "../components/Search"
 import { CardListRestaurant } from "../components/CardListRestaurant"
 import { useLoaderData } from "react-router-dom"
-
-interface Restaurants {
-  id: number,
-  name: string,
-  address: string,
-  image: string,
-  hours: [
-    {
-      from: string,
-      to: string,
-      days: number[]
-    }
-  ]
-}
+import { Restaurant } from "../interfaces"
 
 const LoaderList = async () => {
   const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
@@ -24,8 +11,8 @@ const LoaderList = async () => {
 }
 
 const ListRestaurants: React.FC = () => {
-  const dataLoader = useLoaderData() as Restaurants[]
-  const restaurants: Restaurants[] = dataLoader
+  const dataLoader = useLoaderData() as Restaurant[]
+  const restaurants: Restaurant[] = dataLoader
 
   return (
     <div className="h-screen font-mont">
@@ -42,7 +29,7 @@ const ListRestaurants: React.FC = () => {
         </div>
         <div className="flex justify-evenly items-center flex-wrap gap-2 py-3 px-4">
           {
-            restaurants.map((value: Restaurants) => <CardListRestaurant restaurant={value} key={value.id} />
+            restaurants.map((value: Restaurant) => <CardListRestaurant restaurant={value} key={value.id} />
             )
           }
         </div>

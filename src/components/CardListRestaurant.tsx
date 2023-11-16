@@ -1,25 +1,8 @@
 import restaurantLogo from "../assets/vegan-restaurant-logo-design_1438-10.png"
 import { Link } from "react-router-dom"
+import { Restaurant, PropsCardListRestaurant } from "../interfaces"
 
-interface Restaurant {
-  id: number,
-  name: string,
-  address: string,
-  image: string,
-  hours: [
-    {
-      from: string,
-      to: string,
-      days: number[]
-    }
-  ]
-}
-
-interface Props {
-  restaurant: Restaurant
-}
-
-const CardListRestaurant: React.FC<Props> = ({ restaurant }) => {
+const CardListRestaurant: React.FC<PropsCardListRestaurant> = ({ restaurant }) => {
   const week = new Date().getDay()
   const open = restaurant.hours[0].days.includes(week)
 

@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import './index.css'
 import { ListRestaurants, LoaderList } from './routers/ListRestaurants.tsx'
-import { Restaurant, RestaurantLoader } from './routers/Restaurant.tsx'
+import { RestaurantPage, RestaurantLoader } from './routers/Restaurant.tsx'
 
 const router = createBrowserRouter([
     {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/restaurant/:id',
-        element: <Restaurant />,
+        element: <RestaurantPage />,
         loader: RestaurantLoader
     }
 ])

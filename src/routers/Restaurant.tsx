@@ -3,37 +3,18 @@ import chevronDown from "../assets/chevron-down.svg"
 import { CardCardapio } from "../components/CardCardapio"
 import { Search } from "../components/Search"
 import { useLoaderData } from "react-router-dom"
-
-interface TextHours {
-  weeks: string,
-  saturday: string,
-  sunday: string
-}
-
-interface Hours {
-  from: string,
-  to: string,
-  days: number[]
-}
-
-interface Restaurants {
-  id: number,
-  name: string,
-  address: string,
-  image: string,
-  hours: Hours[]
-}
+import { Restaurant, Hours, TextHours } from "../interfaces"
 
 const RestaurantLoader = async ({ params }) => {
   const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
-  const dataLoader: Restaurants[] = data
+  const dataLoader: Restaurant[] = data
   const restaurant = dataLoader.find(r => r.id == params.id)
 
   return restaurant
 }
 
-const Restaurant: React.FC = () => {
-  const restaurant: Restaurants = useLoaderData() as Restaurants
+const RestaurantPage: React.FC = () => {
+  const restaurant: Restaurant = useLoaderData() as Restaurant
 
   const daysWeekOpen = (hours: Hours) => {
     const days: string[] = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
@@ -129,4 +110,4 @@ const Restaurant: React.FC = () => {
   )
 }
 
-export { Restaurant, RestaurantLoader }
+export { RestaurantPage, RestaurantLoader }
