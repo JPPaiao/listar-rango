@@ -17,7 +17,7 @@ const CardListRestaurant: React.FC<PropsCardListRestaurant> = ({ restaurant }) =
           <h3 className="text-xs max-w-[200px]">{restaurant.address}</h3>
         </div>
       </Link>
-      <div className="relative w-14 bg-indigo-900 bottom-28 left-80 py-2 px-1 text-xs text-center flex justify-center items-center rounded-full text-white font-mont">
+      {/* <div className="relative w-14 bg-indigo-900 bottom-28 left-80 py-2 px-1 text-xs text-center flex justify-center items-center rounded-full text-white font-mont">
         {
           (open) ? (
             <>
@@ -28,7 +28,7 @@ const CardListRestaurant: React.FC<PropsCardListRestaurant> = ({ restaurant }) =
             Fechado</>
           )
         }
-      </div>
+      </div> */}
     </div>
   )
 }

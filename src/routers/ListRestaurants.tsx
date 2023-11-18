@@ -19,15 +19,15 @@ const ListRestaurants: React.FC = () => {
       <header className="flex gap-5 flex-col items-center">
         <div className="w-full bg-cyan-600 h-14">
         </div>
-        <h1 className="text-2xl text-zinc-600">
+        <h1 className="text-2xl text-zinc-600 px-4">
           Bem-vindo ao Lista Rango
         </h1>
       </header>
-      <main className="px-2">
+      <main className="px-4">
         <div className="max-w-[840px] py-6 m-auto">
           <Search placeholder={"Buscar estabelecimento"} />
         </div>
-        <div className="flex justify-evenly items-center flex-wrap gap-2 py-3 px-4">
+        <div className="grid grid-cols-1 max-w-md md:grid-cols-2 md:max-w-3xl md:gap-6 lg:grid-cols-3 lg:max-w-5xl m-auto justify-evenly items-center gap-4 py-3 px-4">
           {
             restaurants.map((value: Restaurant) => <CardListRestaurant restaurant={value} key={value.id} />
             )
