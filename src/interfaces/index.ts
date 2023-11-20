@@ -19,7 +19,8 @@ interface Restaurant {
 }
 
 interface PropsSearch {
-  placeholder: string
+  placeholder: string,
+  fillterList: any
 }
 
 interface PropsCardListRestaurant {

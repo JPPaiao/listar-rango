@@ -2,6 +2,7 @@ import { Search } from "../components/Search"
 import { CardListRestaurant } from "../components/CardListRestaurant"
 import { useLoaderData } from "react-router-dom"
 import { Restaurant } from "../interfaces"
+import { useState } from "react"
 
 const LoaderList = async () => {
   const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
@@ -12,7 +13,12 @@ const LoaderList = async () => {
 
 const ListRestaurants: React.FC = () => {
   const dataLoader = useLoaderData() as Restaurant[]
-  const restaurants: Restaurant[] = dataLoader
+  const [restaurants, setRestaurants] = useState<Restaurant[]>(dataLoader)
+  const [fillterRestaurants, setFillterRestaurants] = useState<Restaurant[]>(dataLoader)
+
+  const handleFillter = (fill: string) => {
+    setFillterRestaurants(restaurants.filter((r: Restaurant) => r.name.toLocaleLowerCase().includes(fill.toLocaleLowerCase())))
+  }
 
   return (
     <div className="h-screen font-mont">
@@ -25,11 +31,11 @@ const ListRestaurants: React.FC = () => {
       </header>
       <main className="px-4">
         <div className="max-w-[840px] py-6 m-auto">
-          <Search placeholder={"Buscar estabelecimento"} />
+          <Search placeholder={"Buscar estabelecimento"} fillterList={handleFillter} />
         </div>
         <div className="grid grid-cols-1 max-w-md md:grid-cols-2 md:max-w-3xl md:gap-6 lg:grid-cols-3 lg:max-w-5xl m-auto justify-evenly items-center gap-4 py-3 px-4">
           {
-            restaurants.map((value: Restaurant) => <CardListRestaurant restaurant={value} key={value.id} />
+            fillterRestaurants.map((value: Restaurant) => <CardListRestaurant restaurant={value} key={value.id} />
             )
           }
         </div>
