@@ -20,7 +20,7 @@ interface Restaurant {
 
 interface PropsSearch {
   placeholder: string,
-  fillterList: any
+  fillterList?: any
 }
 
 interface PropsCardListRestaurant {

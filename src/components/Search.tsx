@@ -6,7 +6,9 @@ const Search: React.FC<PropsSearch> = ({ placeholder, fillterList }) => {
   const [searchRestaurants, setSearchRestaurants] = useState<string>('')
 
   useEffect(() => {
-    fillterList(searchRestaurants)
+    if (typeof fillterList === 'function') {
+      fillterList(searchRestaurants)
+    }
   }, [searchRestaurants])
 
   return (
