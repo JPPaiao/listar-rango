@@ -8,7 +8,7 @@ const CardListRestaurant: React.FC<PropsCardListRestaurant> = ({ restaurant }) =
 
   return (
     <div>
-      <Link to={`/restaurant/${restaurant.id}`} className="font-sans flex gap-6 justify-between items-center shadow-box rounded px-3  w-full cursor-pointer">
+      <Link to={`/restaurant/${restaurant.id}`} className="font-sans flex gap-6 justify-between items-center shadow-box rounded px-3 w-full cursor-pointer hover:scale-95 transition ease-in">
         <div className="max-w-[106px]">
           <img src={restaurantLogo} alt="Restaurant logo" />
         </div>
