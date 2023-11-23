@@ -91,5 +91,567 @@
         }
       ]
     }
+  ],
+  "menus": [
+    {
+      "restaurantId": 0,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 0,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 0,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 0,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 1,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 1,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 1,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 1,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 2,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 2,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 2,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 2,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 3,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 3,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 3,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 3,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 4,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 4,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 4,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 4,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 5,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 5,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 5,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 5,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 6,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 6,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 6,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "restaurantId": 6,
+      "name": "X-burguer",
+      "image": "",
+      "price": 25,
+      "group": "almoços",
+      "sales": [
+        {
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor, eveniet reprehenderit expedita illo a neque adipisci",
+          "price": 20,
+          "hours": [
+            {
+              "from": "08:00",
+              "to": "23:00",
+              "days": [1, 2, 3, 4, 5, 6, 7]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

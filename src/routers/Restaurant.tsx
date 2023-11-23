@@ -3,44 +3,57 @@ import chevronDown from "../assets/chevron-down.svg"
 import { CardCardapio } from "../components/CardCardapio"
 import { Search } from "../components/Search"
 import { useLoaderData } from "react-router-dom"
-import { Restaurant, Hours, TextHours } from "../interfaces"
+import { Restaurant, Hours, TextHours, Menus, LoaderRestaurant } from "../interfaces"
 
 const RestaurantLoader = async ({ params }) => {
-  const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
-  const dataLoader: Restaurant[] = data
-  const restaurant = dataLoader.find(r => r.id == params.id)
+  const fetchRestaurants =  fetch("http://localhost:3000/restaurants")
+  const fetchMenus =  fetch("http://localhost:3000/menus")
+  const datas: { restaurants: Restaurant[], menus: Menus[] } = {
+    restaurants: [],
+    menus: []
+  }
 
-  return restaurant
+  await Promise.all([fetchRestaurants, fetchMenus])
+  .then(async response => {
+    datas.restaurants = await response[0].json()
+    datas.menus = await response[1].json()
+  })
+
+  const restaurant = datas.restaurants.find(r => r.id == params.id)
+  const menus = datas.menus.filter(m => m.restaurantId == restaurant?.id)
+
+  return { restaurant, menus } as LoaderRestaurant
+}
+
+const daysWeekOpen = (hours: Hours) => {
+  const days: string[] = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  const daysWeek: string[] = []
+  const endWeek: string[] = []
+
+  hours.days.forEach((d: number) => {
+    if (days[d-1] == days[0] || days[d-1] == days[days.length-1]) {
+      endWeek.push(days[d-1])
+    } else {
+      daysWeek.push(days[d-1])
+    }
+  })
+  
+  const sunday: string = endWeek.includes('Domingo') ? `Domingo:  ${hours.from} às ${hours.to}` : ''
+  const saturday: string = endWeek.includes('Sábado') ? `Sábado:  ${hours.from} às ${hours.to}` : ''
+  const text: TextHours = {
+    weeks: `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`,
+    saturday: saturday,
+    sunday: sunday
+  }
+
+  return text
 }
 
 const RestaurantPage: React.FC = () => {
-  const restaurant: Restaurant = useLoaderData() as Restaurant
-
-  const daysWeekOpen = (hours: Hours) => {
-    const days: string[] = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
-    const daysWeek: string[] = []
-    const endWeek: string[] = []
-
-    hours.days.forEach((d: number) => {
-      if (days[d-1] == days[0] || days[d-1] == days[days.length-1]) {
-        endWeek.push(days[d-1])
-      } else {
-        daysWeek.push(days[d-1])
-      }
-    })
-    
-    const sunday: string = endWeek.includes('Domingo') ? `Domingo:  ${hours.from} às ${hours.to}` : ''
-    const saturday: string = endWeek.includes('Sábado') ? `Sábado:  ${hours.from} às ${hours.to}` : ''
-    const text: TextHours = {
-      weeks: `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`,
-      saturday: saturday,
-      sunday: sunday
-    }
-
-    return text
-  }
-
+  const loader = useLoaderData() as LoaderRestaurant
+  const { restaurant, menus } = loader
   const daysOpen: TextHours = daysWeekOpen(restaurant.hours[0])
+  const groups = ['Almoço', 'Bebidas', 'Sobremesa']
 
   return (
     <div>
