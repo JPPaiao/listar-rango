@@ -2,7 +2,7 @@ import pratoRestaurant from "../assets/prato-de-restaurante-vegetariano.png"
 
 const CardCardapio: React.FC = () => {
   return (
-    <div className="flex gap-3 max-w-sm shadow-box  h-[116px] rounded-r-md">
+    <div className="flex gap-3 max-w-sm shadow-box h-[116px] rounded-r-md cursor-pointer hover:scale-95 transition ease-in">
       <img src={pratoRestaurant} alt="" 
         className="w-28"
       />
