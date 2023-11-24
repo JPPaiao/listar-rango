@@ -6,7 +6,9 @@ import { useState } from "react"
 import { MagicMotion } from "react-magic-motion"
 
 const LoaderList = async () => {
-  const data = await fetch("http://localhost:3000/restaurants").then(d => d.json())
+  const data = await fetch("http://localhost:5173/db.json")
+  .then(d => d.json())
+  .then(d => d.restaurants)
   const dataLoader = data
 
   return dataLoader

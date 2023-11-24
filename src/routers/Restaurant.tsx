@@ -8,8 +8,8 @@ import { MagicMotion } from "react-magic-motion"
 import { useState } from "react"
 
 const RestaurantLoader = async ({ params }) => {
-  const fetchRestaurants =  fetch("http://localhost:3000/restaurants")
-  const fetchMenus =  fetch("http://localhost:3000/menus")
+  const fetchRestaurants =  fetch("http://localhost:5173/db.json")
+  const fetchMenus =  fetch("http://localhost:5173/db.json")
   const datas: { restaurants: Restaurant[], menus: Menus[] } = {
     restaurants: [],
     menus: []
@@ -18,7 +18,9 @@ const RestaurantLoader = async ({ params }) => {
   await Promise.all([fetchRestaurants, fetchMenus])
   .then(async response => {
     datas.restaurants = await response[0].json()
+    .then(e => e.restaurants)
     datas.menus = await response[1].json()
+    .then(e => e.menus)
   })
 
   const restaurant = datas.restaurants.find(r => r.id == params.id)
@@ -63,7 +65,9 @@ const RestaurantPage: React.FC = () => {
   }
 
   return (
-    <MagicMotion>
+    <MagicMotion 
+      transition={{ type: "tween" }}
+    >
       <div>
         <div className="w-full bg-cyan-600 h-14 shadow-box">
         </div>
