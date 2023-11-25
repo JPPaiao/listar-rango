@@ -71,8 +71,8 @@ const RestaurantPage: React.FC = () => {
       <div>
         <div className="w-full bg-cyan-600 h-14 shadow-box">
         </div>
-        <div className="max-w-6xl m-auto px-3">      
-          <header className="max-w-4xl pt-6">
+        <div className="max-w-6xl m-auto px-5">      
+          <header className="max-w-4xl m-auto lg:m-0 py-6 px-7 lg:px-0">
             <div className="flex items-center">
               <img src={restaurantLogo} alt="Logo do restaurant" 
                 className="w-36"
@@ -91,7 +91,7 @@ const RestaurantPage: React.FC = () => {
             </div>
           </header>
           <main className="flex justify-between gap-4 py-3">
-            <div className="flex flex-col max-w-[802px] w-full">
+            <div className="flex flex-col max-w-[802px] m-auto lg:m-0 w-full">
               <div className="w-full mb-4">
                 <Search placeholder="Buscar cardapio" />
               </div>
@@ -112,16 +112,16 @@ const RestaurantPage: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                      {
-                        showGroups === i && (
-                        <div className="flex flex-wrap gap-6 font-mont py-5">
-                          <CardCardapio />
-                          <CardCardapio />
-                          <CardCardapio />
-                          <CardCardapio />
-                        </div>
-                        )
-                      }
+                      <div className="grid md:grid-cols-2 grid-cols-1 md:max-w-none max-w-lg m-auto gap-4 font-mont">
+                        {
+                          showGroups === i && menus.map(menu => (
+                              <>
+                                <CardCardapio menu={menu} />
+                              </>
+                            ) 
+                          )
+                        }
+                      </div>
                     </>
                   ))
                 }

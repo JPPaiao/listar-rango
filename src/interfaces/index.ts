@@ -53,4 +53,8 @@ interface PropsCardListRestaurant {
   restaurant: Restaurant
 }
 
-export type { Hours, PropsCardListRestaurant, PropsSearch, Restaurant, TextHours, Menus, LoaderRestaurant }
+interface PropsCardCardapio {
+  menu: Menus
+}
+
+export type { Hours, PropsCardListRestaurant, PropsSearch, Restaurant, PropsCardCardapio, TextHours, Menus, LoaderRestaurant }
