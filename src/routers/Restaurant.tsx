@@ -2,7 +2,7 @@ import restaurantLogo from "../assets/vegan-restaurant-logo-design_1438-10@2x.pn
 import chevronDown from "../assets/chevron-down.svg"
 import { CardCardapio } from "../components/CardCardapio"
 import { Search } from "../components/Search"
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 import { Restaurant, Hours, TextHours, Menus, LoaderRestaurant } from "../interfaces"
 import { MagicMotion } from "react-magic-motion"
 import { useState } from "react"
@@ -56,9 +56,15 @@ const daysWeekOpen = (hours: Hours) => {
 const RestaurantPage: React.FC = () => {
   const loader = useLoaderData() as LoaderRestaurant
   const { restaurant, menus } = loader
+  const [fillterMenu, setFillterMenu] = useState<Menus[]>(menus)
   const daysOpen: TextHours = daysWeekOpen(restaurant.hours[0])
   const groups = ['Almoço', 'Bebidas', 'Sobremesa']
   const [showGroups, setShowGroups] = useState<number>(0)
+
+  const handleFillterMenus = (searchFillter: string) => {
+    const fillter = menus.filter(m => m.name.toLocaleLowerCase().includes(searchFillter.toLocaleLowerCase()))
+    setFillterMenu(fillter)
+  }
 
   const handleShowsGroup = (numberGroup: number) => {
     setShowGroups(numberGroup)
@@ -72,8 +78,11 @@ const RestaurantPage: React.FC = () => {
         <div className="w-full bg-cyan-600 h-14 shadow-box">
         </div>
         <div className="max-w-6xl m-auto px-5">      
-          <header className="max-w-4xl m-auto lg:m-0 py-6 px-7 lg:px-0">
-            <div className="flex items-center">
+          <header className="max-w-4xl m-auto lg:m-0 px-7 lg:px-0">
+            <Link to={'/'} className="px-7 underline text-xs text-zinc-600 hover:text-zinc-300 transition delay-100">
+              Voltar para a home
+            </Link>
+            <div className="flex items-center py-6">
               <img src={restaurantLogo} alt="Logo do restaurant" 
                 className="w-36"
               />
@@ -93,7 +102,7 @@ const RestaurantPage: React.FC = () => {
           <main className="flex justify-between gap-4 py-3">
             <div className="flex flex-col max-w-[802px] m-auto lg:m-0 w-full">
               <div className="w-full mb-4">
-                <Search placeholder="Buscar cardapio" />
+                <Search placeholder="Buscar cardapio" fillterList={handleFillterMenus} />
               </div>
               <div>
                 {
@@ -114,9 +123,9 @@ const RestaurantPage: React.FC = () => {
                       </div>
                       <div className="grid md:grid-cols-2 grid-cols-1 md:max-w-none max-w-lg m-auto gap-4 font-mont">
                         {
-                          showGroups === i && menus.map(menu => (
+                          showGroups === i && fillterMenu.map(menu => (
                               <>
-                                <CardCardapio menu={menu} />
+                                <CardCardapio menu={menu} key={menu.restaurantId} />
                               </>
                             ) 
                           )
