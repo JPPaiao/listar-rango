@@ -10,6 +10,12 @@ interface Hours {
   days: number[]
 }
 
+interface Sales {
+  description: string,
+  price: number,
+  hours: Hours[]
+}
+
 interface LoaderRestaurant {
   restaurant: Restaurant,
   menus: Menus[]
@@ -21,19 +27,7 @@ interface Menus {
   image: string,
   price: number,
   group: string,
-  sales: [
-    {
-      description: string,
-      price: number,
-      hours: [
-        {
-          from: string,
-          to: string,
-          days: number[]
-        }
-      ]
-    }
-  ]
+  sales: Sales[]
 }
 
 interface Restaurant {
@@ -42,6 +36,10 @@ interface Restaurant {
   address: string,
   image: string,
   hours: Hours[]
+}
+
+interface PropsModal {
+  menu: Menus
 }
 
 interface PropsSearch {
@@ -55,6 +53,7 @@ interface PropsCardListRestaurant {
 
 interface PropsCardCardapio {
   menu: Menus
+  menuModal?: any
 }
 
-export type { Hours, PropsCardListRestaurant, PropsSearch, Restaurant, PropsCardCardapio, TextHours, Menus, LoaderRestaurant }
+export type { Hours, PropsCardListRestaurant, PropsSearch, Restaurant, PropsCardCardapio, TextHours, Menus, LoaderRestaurant, PropsModal }
