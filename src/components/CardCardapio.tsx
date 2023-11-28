@@ -1,9 +1,9 @@
-import pratoRestaurant from "../assets/prato-de-restaurante-vegetariano.png"
+import pratoRestaurant from "../assets/prato-de-restaurante-vegetariano-menu@2x.png"
 import { PropsCardCardapio } from "../interfaces"
 
-const CardCardapio: React.FC<PropsCardCardapio> = ({ menu }) => {
+const CardCardapio: React.FC<PropsCardCardapio> = ({ menu, menuModal }) => {
   return (
-    <div className="flex gap-3 shadow-box h-[116px] rounded-r-md cursor-pointer hover:scale-95 transition ease-in">
+    <a href={`#${menu.name}Modal`} onClick={() => menuModal(menu)} className="flex gap-3 shadow-box h-[116px] rounded-r-md cursor-pointer hover:scale-95 transition ease-in">
       <img src={pratoRestaurant} alt="" 
         className="w-28"
       />
@@ -15,7 +15,7 @@ const CardCardapio: React.FC<PropsCardCardapio> = ({ menu }) => {
           <span className="text-xs line-through">R$ {menu.price},00</span>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

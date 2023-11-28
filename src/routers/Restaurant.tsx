@@ -6,6 +6,7 @@ import { Link, useLoaderData } from "react-router-dom"
 import { Restaurant, Hours, TextHours, Menus, LoaderRestaurant } from "../interfaces"
 import { MagicMotion } from "react-magic-motion"
 import { useState } from "react"
+import { Modal } from "../components/Modal"
 
 const RestaurantLoader = async ({ params }) => {
   const fetchRestaurants =  fetch("http://localhost:5173/db.json")
@@ -60,9 +61,10 @@ const RestaurantPage: React.FC = () => {
   const daysOpen: TextHours = daysWeekOpen(restaurant.hours[0])
   const groups = ['Almoço', 'Bebidas', 'Sobremesa']
   const [showGroups, setShowGroups] = useState<number>(0)
+  const [openModal, setOpenModal] = useState<Menus>(menus[0])
 
   const handleFillterMenus = (searchFillter: string) => {
-    const fillter = menus.filter(m => m.name.toLocaleLowerCase().includes(searchFillter.toLocaleLowerCase()))
+    const fillter = menus.filter(m => m.name.toLocaleLowerCase().replace('-', ' ').includes(searchFillter.toLocaleLowerCase().replace('-', ' ')) )
     setFillterMenu(fillter)
   }
 
@@ -105,6 +107,7 @@ const RestaurantPage: React.FC = () => {
                 <Search placeholder="Buscar cardapio" fillterList={handleFillterMenus} />
               </div>
               <div>
+              <Modal menu={openModal} />
                 {
                   groups.map((g, i) => (
                     <>
@@ -125,7 +128,7 @@ const RestaurantPage: React.FC = () => {
                         {
                           showGroups === i && fillterMenu.map(menu => (
                               <>
-                                <CardCardapio menu={menu} key={menu.restaurantId} />
+                                <CardCardapio menu={menu} menuModal={setOpenModal} key={menu.restaurantId} />
                               </>
                             ) 
                           )
