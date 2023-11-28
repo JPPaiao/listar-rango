@@ -11,8 +11,8 @@ const Modal: React.FC<PropsModal> = ({ menu }) => {
   return (
     <div id={`${menu.name}Modal`} className={`${open} w-full fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-50 z-50 font-mont shadow-box px-5`}>
       <div className="flex flex-col items-center justify-center opacity-100 max-w-xl z-50">
-        <a href="#" className="z-50 text-center rounded-t-md sm:relative sm:left-[287px] sm:top-5 text-3xl cursor-pointer px-2 sm:rounded-[50%] bg-white font-bold sm:shadow-box sm:inline mx-2">x</a>
-        <div className="z-40 bg-white text-black rounded-lg">
+        <a href="#" className="z-50 text-center rounded-t-md sm:relative sm:left-[287px] sm:top-5 text-3xl cursor-pointer px-2 sm:rounded-[50%] bg-white font-bold sm:shadow-box sm:inline mx-2 shadow-box">x</a>
+        <div className="z-40 bg-white text-black rounded-lg shadow-box">
           <header className="px-4 pt-4">
             <img src={pratoRestaurant} alt="" />
           </header>

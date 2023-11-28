@@ -37,7 +37,7 @@ const ListRestaurants: React.FC = () => {
           <div className="max-w-[840px] py-6 m-auto">
             <Search placeholder={"Buscar estabelecimento"} fillterList={handleFillter} />
           </div>
-          <div className="grid grid-cols-1 max-w-md md:grid-cols-2 md:max-w-3xl md:gap-6 lg:grid-cols-3 lg:max-w-5xl m-auto justify-evenly items-center gap-4 py-3 px-4">
+          <div className="grid grid-cols-1 max-w-md md:grid-cols-2 md:max-w-3xl lg:grid-cols-3 lg:max-w-5xl m-auto justify-evenly items-center gap-y-5 py-3 px-4">
             {
               fillterRestaurants.map((value: Restaurant) => <CardListRestaurant restaurant={value} key={value.id} />
               )
