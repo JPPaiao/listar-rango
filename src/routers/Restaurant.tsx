@@ -45,8 +45,10 @@ const daysWeekOpen = (hours: Hours) => {
   
   const sunday: string = endWeek.includes('Domingo') ? `Domingo:  ${hours.from} às ${hours.to}` : ''
   const saturday: string = endWeek.includes('Sábado') ? `Sábado:  ${hours.from} às ${hours.to}` : ''
+  const week: string = daysWeek.length == 0 ? '' : daysWeek.length <= 1 ? `${daysWeek[0]}: ${hours.from} às ${hours.to}` : `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`
+
   const text: TextHours = {
-    weeks: `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`,
+    weeks: week,
     saturday: saturday,
     sunday: sunday
   }
@@ -110,10 +112,9 @@ const RestaurantPage: React.FC = () => {
               <Modal menu={openModal} />
                 {
                   groups.map((g, i) => (
-                    <>
+                    <div key={i}>
                       <div className="px-2 py-3 font-mont font-semibold cursor-pointer bg-white"
                         onClick={() => handleShowsGroup(i)}
-                        key={i}
                       >
                         <div className="flex justify-between items-center px-3 pb-1 border-b border-black cursor-pointer">
                           <span>{g}</span>
@@ -134,7 +135,7 @@ const RestaurantPage: React.FC = () => {
                           )
                         }
                       </div>
-                    </>
+                    </div>
                   ))
                 }
               </div>
