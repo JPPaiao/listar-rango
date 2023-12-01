@@ -45,7 +45,11 @@ const daysWeekOpen = (hours: Hours) => {
   
   const sunday: string = endWeek.includes('Domingo') ? `Domingo:  ${hours.from} às ${hours.to}` : ''
   const saturday: string = endWeek.includes('Sábado') ? `Sábado:  ${hours.from} às ${hours.to}` : ''
-  const week: string = daysWeek.length == 0 ? '' : daysWeek.length <= 1 ? `${daysWeek[0]}: ${hours.from} às ${hours.to}` : `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`
+  let week: string = ''
+
+  if (daysWeek.length == 0) week = ''
+  if (daysWeek.length <= 1) week = `${daysWeek[0]}: ${hours.from} às ${hours.to}`
+  else week = `${daysWeek[0]} à ${daysWeek[daysWeek.length-1]}:  ${hours.from} às ${hours.to}`
 
   const text: TextHours = {
     weeks: week,
