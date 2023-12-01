@@ -9,8 +9,8 @@ import { useState } from "react"
 import { Modal } from "../components/Modal"
 
 const RestaurantLoader = async ({ params }) => {
-  const fetchRestaurants =  fetch("http://localhost:5173/db.json")
-  const fetchMenus =  fetch("http://localhost:5173/db.json")
+  const fetchRestaurants =  fetch("https://aesthetic-hummingbird-8db2ec.netlify.app/db.json")
+  const fetchMenus =  fetch("https://aesthetic-hummingbird-8db2ec.netlify.app/db.json")
   const datas: { restaurants: Restaurant[], menus: Menus[] } = {
     restaurants: [],
     menus: []
